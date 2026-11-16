@@ -1,2 +1,3 @@
 # MG6
-
+## Every iteration of a for loop inside Update() runs before that call to Update() finishes. Unity does not automatically spread the iterations across multiple frames. If the loop takes a long time, it delays the current frame and can make the game stutter or freeze.
+## While testing, I noticed that the cat could jump through the brown ground tiles and land on a higher row. The code disables the cat’s entire body collider whenever its vertical velocity is positive, so the cat passes through both platforms and solid ground on the way up. When the cat reaches the top of the jump and starts falling, the collider turns back on, allowing the cat to land on the higher ground tiles.
